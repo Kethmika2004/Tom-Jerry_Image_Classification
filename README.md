@@ -146,7 +146,7 @@ flowchart LR
 ## 🏗️ Model Architecture
 
 <div align="center">
-
+    
 ```
 ┌─────────────────────────────────────────────┐
 │              Input Image (RGB)               │
