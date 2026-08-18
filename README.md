@@ -31,7 +31,7 @@
 
 > *"Character recognition in video frames is a fundamental challenge in computer vision."*
 
-This project tackles a **4-class image classification problem**: given a frame extracted from the classic *Tom & Jerry* cartoon series, predict which character(s) appear in it.
+This project tackles a **4 class image classification problem**: given a frame extracted from the classic *Tom & Jerry* cartoon series, predict which character(s) appear in it.
 
 | Class | Meaning |
 |:---:|:---|
@@ -40,7 +40,7 @@ This project tackles a **4-class image classification problem**: given a frame e
 | 🐭 `2` | Only **Jerry** |
 | 🐱🐭 `3` | **Both** Tom and Jerry |
 
-Built end-to-end with **transfer learning**, careful **class-imbalance handling**, and full **model interpretability** — not just a black box that spits out a number.
+Built end-to-end with **transfer learning**, careful **class imbalance handling**, and full **model interpretability**, not just a black box that spits out a number.
 
 <br>
 
@@ -54,7 +54,7 @@ Built end-to-end with **transfer learning**, careful **class-imbalance handling*
 
 </div>
 
-The dataset is explicitly **imbalanced** and **noisy** — motion blur, partial occlusion, and characters sharing screen space with each other and background elements. This isn't a clean, curated dataset — it's messy, real, extracted-from-video data.
+The dataset is explicitly **imbalanced** and **noisy** motion blur, partial occlusion, and characters sharing screen space with each other and background elements. This isn't a clean, curated dataset it's messy, real, extracted from video data.
 
 ```
 📊 Class Distribution (Training Set)
@@ -77,13 +77,13 @@ The dataset is explicitly **imbalanced** and **noisy** — motion blur, partial 
 <td width="50%">
 
 **Sample Training Frames**
-<img src="assets/sample_images.png" alt="Sample images per class">
+<img width="1281" height="877" alt="Screenshot 2026-08-18 100536" src="https://github.com/user-attachments/assets/958f613c-7017-4912-9ef0-f2cf8aaf04e6" />
 
 </td>
 <td width="50%">
 
 **Augmented Training Data**
-<img src="assets/augmented_samples.png" alt="Augmented samples">
+<img width="1078" height="731" alt="Screenshot 2026-08-16 150524" src="https://github.com/user-attachments/assets/2dfe54c1-83ec-4d49-b54d-afbe47f9afb8" />
 
 </td>
 </tr>
@@ -91,13 +91,14 @@ The dataset is explicitly **imbalanced** and **noisy** — motion blur, partial 
 <td width="50%">
 
 **Confusion Matrix**
-<img src="assets/confusion_matrix.png" alt="Confusion matrix">
+<img width="721" height="732" alt="Screenshot 2026-08-16 144815" src="https://github.com/user-attachments/assets/10de25f9-3175-479b-8ce6-91535e8df9a5" />
 
 </td>
 <td width="50%">
 
 **Grad-CAM: Where the Model Looks**
-<img src="assets/gradcam.png" alt="Grad-CAM visualization">
+<img width="1668" height="816" alt="Screenshot 2026-08-16 150631" src="https://github.com/user-attachments/assets/dce292f4-8915-4ff0-b62f-cd72e6f9a4da" />
+
 
 </td>
 </tr>
@@ -125,18 +126,18 @@ flowchart LR
 
 <br>
 
-1. **Exploratory Data Analysis** — class distribution, sample inspection, corrupt-file scanning, image size consistency checks
-2. **Stratified Train/Validation Split** — preserves each class's proportion, critical given the imbalance
-3. **CSV-Driven Data Pipeline** — images loaded by filename via `tf.data`, not folder structure
-4. **Data Augmentation** — random flip, rotation, zoom, contrast, brightness jitter (training-only)
-5. **Class Imbalance Handling** — balanced class weights + oversampling of underrepresented classes
-6. **Transfer Learning** — pretrained EfficientNet backbone (ImageNet weights)
+1. **Exploratory Data Analysis** - class distribution, sample inspection, corrupt file scanning, image size consistency checks
+2. **Stratified Train/Validation Split** - preserves each class's proportion, critical given the imbalance
+3. **CSV-Driven Data Pipeline** - images loaded by filename via `tf.data`, not folder structure
+4. **Data Augmentation** - random flip, rotation, zoom, contrast, brightness jitter (training-only)
+5. **Class Imbalance Handling** - balanced class weights + oversampling of underrepresented classes
+6. **Transfer Learning** - pretrained EfficientNet backbone (ImageNet weights)
 7. **Two-Stage Training**
-   - 🥶 **Stage A** — backbone frozen, train new classification head
-   - 🔥 **Stage B** — fine-tune with a much lower learning rate
-8. **Evaluation** — Macro F1, per-class precision/recall/F1, confusion matrix, misclassified examples
-9. **Grad-CAM** — visual sanity check that the model attends to the actual characters
-10. **Test-Time Augmentation (TTA)** — predictions averaged across multiple augmented passes for robustness
+   - 🥶 **Stage A** - backbone frozen, train new classification head
+   - 🔥 **Stage B** - fine tune with a much lower learning rate
+8. **Evaluation** - Macro F1, per-class precision/recall/F1, confusion matrix, misclassified examples
+9. **Grad CAM** - visual sanity check that the model attends to the actual characters
+10. **Test Time Augmentation (TTA)** - predictions averaged across multiple augmented passes for robustness
 
 </details>
 
@@ -289,14 +290,14 @@ Computer Science & Engineering Undergraduate · University of Moratuwa
 
 ## 🙏 Acknowledgments
 
-- **OctWave 3.0 Organizing Committee** — IEEE Industry Applications Society Student Branch Chapter, University of Moratuwa
-- Dataset curated for the *OctWave 3.0 — Kaggle Challenge 02* competition
+- **OctWave 3.0 Organizing Committee** - IEEE Industry Applications Society Student Branch Chapter, University of Moratuwa
+- Dataset curated for the *OctWave 3.0 - Kaggle Challenge 02* competition
 
 <br>
 
 ## 📜 License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <br>
 
