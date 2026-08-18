@@ -4,7 +4,7 @@
 
 # 🐱 Tom & Jerry Image Classification 🐭
 
-<img width="1672" height="940" alt="ChatGPT Image Aug 18, 2026, 09_55_22 AM" src="https://github.com/user-attachments/assets/a57c65e3-3c99-49ab-ba71-4377195583fc" />
+<img src="assets/banner.png" alt="Tom & Jerry Image Classification Banner" width="100%">
 
 ### Detecting Cartoon Characters in Frames with Deep Learning
 
@@ -77,13 +77,13 @@ The dataset is explicitly **imbalanced** and **noisy** motion blur, partial occl
 <td width="50%">
 
 **Sample Training Frames**
-<img width="1281" height="877" alt="Screenshot 2026-08-18 100536" src="https://github.com/user-attachments/assets/958f613c-7017-4912-9ef0-f2cf8aaf04e6" />
+<img src="assets/sample_images.png" alt="Sample images per class">
 
 </td>
 <td width="50%">
 
 **Augmented Training Data**
-<img width="1078" height="731" alt="Screenshot 2026-08-16 150524" src="https://github.com/user-attachments/assets/2dfe54c1-83ec-4d49-b54d-afbe47f9afb8" />
+<img src="assets/augmented_samples.png" alt="Augmented samples">
 
 </td>
 </tr>
@@ -91,13 +91,13 @@ The dataset is explicitly **imbalanced** and **noisy** motion blur, partial occl
 <td width="50%">
 
 **Confusion Matrix**
-<img width="721" height="732" alt="Screenshot 2026-08-16 144815" src="https://github.com/user-attachments/assets/10de25f9-3175-479b-8ce6-91535e8df9a5" />
+<img src="assets/confusion_matrix.png" alt="Confusion matrix">
 
 </td>
 <td width="50%">
 
 **Grad-CAM: Where the Model Looks**
-<img width="1668" height="816" alt="Screenshot 2026-08-16 150631" src="https://github.com/user-attachments/assets/dce292f4-8915-4ff0-b62f-cd72e6f9a4da" />
+<img src="assets/gradcam.png" alt="Grad-CAM visualization">
 
 
 </td>
